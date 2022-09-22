@@ -1,0 +1,45 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    color: $main-text-color;
+    background-color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.04em;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+
+    @include mobile {
+        width: 480px;
+    }
+
+    @include tablet {
+        width: 768px;
+    }
+
+    @include desktop {
+        width: 1200px;
+    }
+
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}

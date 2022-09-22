@@ -1,2 +1,13 @@
-@import './common';
-@import './example';
+@import '~node_modules/modern-normalize/modern-normalize.css';
+@import './base/variables';
+@import './base/mixin';
+@import './base/base-drop';
+@import './base/global-apps';
+@import './partials/header';
+@import './partials/hero';
+@import './partials/about';
+@import './partials/advantages';
+@import './partials/gallery';
+@import './partials/reviews';
+@import './partials/contacts';
+@import './partials/footer';
