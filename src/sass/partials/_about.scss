@@ -1,0 +1,16 @@
+.about {
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 60px;
+  padding-bottom: 0;
+  margin-bottom: 42px;
+
+  @include tablet {
+    margin-bottom: 48px;
+  }
+  @include desktop {
+    margin-bottom: 60px;
+  }
+}
+.container__about {
+}
