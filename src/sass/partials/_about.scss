@@ -5,6 +5,8 @@
   padding-bottom: 0;
   margin-bottom: 42px;
 
+  background-color: $bg-color;
+
   @include tablet {
     margin-bottom: 48px;
   }
@@ -12,5 +14,68 @@
     margin-bottom: 60px;
   }
 }
+
+.about__label {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.22;
+
+  margin-bottom: 12px;
+}
+.about__title {
+  display: block;
+
+  font-family: 'Seymour One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.27;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  margin-bottom: 32px;
+}
+.about-text {
+  display: block;
+  width: 220px;
+  margin-top: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  align-items: center;
+}
+.about-text__paragraph-1 {
+  font-size: 12px;
+  line-height: 1.76;
+  text-align: center;
+  margin-bottom: 4px;
+}
+.about-text__paragraph-2 {
+  font-size: 12px;
+  line-height: 1.62;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.about__btn {
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: $secondary-text-color;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.29;
+
+  background-color: $yellow-color;
+  border-radius: 10px;
+  border-color: transparent;
+  width: 162px;
+  height: 42px;
+
 .container__about {
+
 }
