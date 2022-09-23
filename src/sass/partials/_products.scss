@@ -64,6 +64,18 @@
     margin-bottom: 40px;
 }
 
+.products--ice-cream::before {
+    content: '';
+    background-image: url(".././images/mobile/ice.png");
+    display: inline-block;
+    width: 242px;
+    height: 241px;
+    // right: 0;
+    // left: 0;
+    // margin: auto;
+    // position: relative;
+}
+
 .products__descr {
     font-size: 14px;
     line-height: calc(25/14);
