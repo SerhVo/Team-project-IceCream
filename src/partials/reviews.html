@@ -1,13 +1,19 @@
 <section class="reviews">
-<div class="container">
-    <div class="reviews__products">
-        <img src="./images/mobile/ice-prod.png" alt="">
-    </div>
+  <div class="container">
     <div>
-        <img src="./images/client/photo1.png" alt="">
-        <div>
-            <p></p>
-        </div>
+      <picture>
+        <source
+          srcset="
+            ./images/client/photo1.png    1x,
+            ./images/client/photo1-2x.png 2x
+          "
+          media="(min-width: 1200px)"
+        />
+        <img src="./images/client/photo1.png" alt="" />
+      </picture>
+      <div>
+        <p></p>
+      </div>
     </div>
-</div>
+  </div>
 </section>

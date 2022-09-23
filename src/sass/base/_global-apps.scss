@@ -15,7 +15,7 @@ body.modal-open {
 
 .container {
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 20px;
 
     @include mobile {
         width: 480px;
@@ -23,10 +23,12 @@ body.modal-open {
 
     @include tablet {
         width: 768px;
+        padding: 0 32px;
     }
 
     @include desktop {
         width: 1200px;
+        padding: 0 20px;
     }
 
 }
