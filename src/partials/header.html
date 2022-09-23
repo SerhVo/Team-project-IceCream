@@ -1,7 +1,87 @@
 <header class="header">
     <div class="container">
-                <img src="./images/mobile/hero/logo.png" alt="logo">
+    <a class="logo" href="./">
+        <picture>
+            <source srcset="
+                    ./images/desktop/Logo.png 1x,
+                    ./images/desktop/Logo-2x.png 2x
+                  "
+                  media="(min-width:1200px)"
+                  sizes="60">
+            <source srcset="
+                    ./images/tablet/hero/logo.png 1x,
+                    ./images/tablet/hero/logo-2x.png 2x
+                  "
+                  media="(min-width:768px)"
+                  sizes="48">
+            <source srcset="
+                    ./images/mobile/hero/logo.png 1x,
+                    ./images/mobile/hero/logo-2x.png 2x
+                  "
+                  media="(min-width:480px)"
+                  sizes="40">
+         
+            <img src="./images/mobile/hero/logo.png" alt="logo" width="60">
+        </picture>
+    </a>
+    <nav>
+            <ul>
+              <li><a href="">Home</a></li>
+              <li><a href="">How it’s made?</a></li>
+              <li><a href="">Our products</a></li>
+              <li><a href="">Contact</a></li>
+            </ul>
 
-        header
+    </nav>
+    <button class="open-mob_menu js-open-menu">
+      <svg width="40" height="37">
+        <use href="./images/svg/icons.svg#icon-menu-open"></use>
+      </svg>
+    </button>
+    <button>buy now
+          <svg width="12" height="12">
+            <use href="./images/svg/icons.svg#vector-btn"></use>
+          </svg>
+ 
+    </button>
+    <div class="mobile-menu js-menu-container">
+    <a href="./">
+      <picture>
+        <source srcset="
+                        ./images/desktop/Logo.png 1x,
+                        ./images/desktop/Logo-2x.png 2x
+                      " media="(min-width:1200px)" sizes="60">
+        <source srcset="
+                        ./images/tablet/hero/logo.png 1x,
+                        ./images/tablet/hero/logo-2x.png 2x
+                      " media="(min-width:768px)" sizes="48">
+        <source srcset="
+                        ./images/mobile/hero/logo.png 1x,
+                        ./images/mobile/hero/logo-2x.png 2x
+                      " media="(min-width:480px)" sizes="40">
+    
+        <img src="./images/mobile/hero/logo.png" alt="logo" width="60">
+      </picture>
+    </a>
+    <button class="menu__close js-close-menu">
+      <svg width="32" height="32">
+        <use href="./images/svg/icons.svg#icon-menu-close"></use>
+      </svg>
+    </button>
+    <nav>
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">How it’s made?</a></li>
+        <li><a href="">Our products</a></li>
+        <li><a href="">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="open-buy_now">
+      buy now
+            <svg width="12" height="12">
+              <use href="./images/svg/icons.svg#vector-btn"></use>
+            </svg>
+    </button>
+    </div>
     </div>
 </header>
