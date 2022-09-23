@@ -1,0 +1,1 @@
+{"mappings":"AACe,IAAIA,OAAO,YAAa","sources":["src/index.js"],"sourcesContent":["import './js/modal.js'\nconst swiper = new Swiper(\".mySwiper\", {});"],"names":["Swiper"],"version":3,"file":"index.21469987.js.map"}
