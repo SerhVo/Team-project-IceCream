@@ -1,2 +1,3 @@
 import './js/modal.js'
-const swiper = new Swiper(".mySwiper", {});
+import "./js/gallery-swiper"
+import "./js/reviews-swiper"
