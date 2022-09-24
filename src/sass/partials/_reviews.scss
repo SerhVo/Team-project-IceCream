@@ -1,10 +1,31 @@
 .reviews{
-    position: relative;
-    
+    margin-left: auto;
+    margin-right: auto;    
 }
 
-.reviews_product{
-    position: absolute;
-    left:auto;
-    right: auto;
+.reviews__field{
+    width: 100%;
+    padding: 34px 39px;
+    border-radius: 10px;
+    background-color: $bg-color;
+    margin-bottom: 30px;
+
+    @include tablet{
+        padding: 28px 80px;
+        margin-bottom: 32px;
+    }
+
+    @include desktop{
+        max-width: 361px;
+        padding: 39px 74px;
+    }
+}
+
+.reviews__name{
+    color: $secondary-text-color;
+    margin-bottom: 20px;
+
+    @include tablet{
+        margin-bottom: 38px;
+    }
 }
