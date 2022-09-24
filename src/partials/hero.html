@@ -1,89 +1,70 @@
 <section class="hero">
   <div class="container hero__container">
-    <h1 class="hero__title">
-      <span class="hero__title--first">ice cream made with</span>
-      passion
-    </h1>
-    <ul class="hero__list-link">
-      <li><a href="./" class="hero__link">Products</a></li>
-      <li><a href="./" class="hero__link">How it’s made?</a></li>
-    </ul>
-    <ul class="hero__list">
-      <li class="hero__item">
-        <p class="hero__number">16<span class="hero__cafes">cafes</span></p>
-      </li>
-      <li class="hero__item">
-        <p class="hero__number">
-          23<span class="hero__cafes">food trucks</span>
+    <div class="hero__cont-text">
+      <div class="hero__cont-title">
+        <h1 class="hero__title">
+          <span class="hero__title--first">ice cream made with</span>
+          passion
+        </h1>
+        <ul class="hero__list-link">
+          <li><a href="./" class="hero__link--btn">Products</a></li>
+          <li><a href="./" class="hero__link">How it’s made?</a></li>
+        </ul>
+      </div>
+      <ul class="hero__list">
+        <li class="hero__item">
+          <p class="hero__number">
+            16<span class="hero__cafes">cafes</span>
+          </p>
+        </li>
+        <li class="hero__item">
+          <p class="hero__number">
+            23<span class="hero__cafes">food trucks</span>
+          </p>
+        </li>
+      </ul>
+    </div>
+    <div class="hero__cont-plate">
+      <picture class="hero__plate">
+        <source srcset="
+                  ./images/desktop/ice-plate.png    1x,
+                  ./images/desktop/ice-plate-2x.png 2x
+                " media="(min-width:1200px)" sizes="225" />
+        <source srcset="
+                  ./images/tablet/hero/ice-plate.png    1x,
+                  ./images/tablet/hero/ice-plate-2x.png 2x
+                " media="(min-width:768px)" sizes="152" />
+        <img src="./images/tablet/hero/ice-plate.png" alt="ice-cream" width="225" />
+      </picture>
+      <div class="hero__text-box">
+        <p class="hero__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et
         </p>
-      </li>
-    </ul>
+        <a href="" class="hero__info-link">
+          <svg width="60" class="hero__icon">
+            <use href="./images/icons.svg#arrow-hero"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="hero__tumb-ice">
+      <picture>
+        <source class="hero__big-ice" srcset="
+                  ./images/desktop/ice-cream.png    1x,
+                  ./images/desktop/ice-cream-2x.png 2x
+                " media="(min-width:1200px)" sizes="484" />
+        <source class="hero__big-ice" srcset="
+                  ./images/tablet/hero/ice-cream.png    1x,
+                  ./images/tablet/hero/ice-cream-2x.png 2x
+                " media="(min-width:768px)" sizes="270" />
+        <source class="hero__big-ice" srcset="
+                  ./images/mobile/hero/ice-cream.png    1x,
+                  ./images/mobile/hero/ice-cream-2x.png 2x
+                " media="(max-width:767px)" sizes="170" />
 
-    <picture class="hero__big-ice">
-      <source
-        srcset="
-          ./images/desktop/ice-cream.png    1x,
-          ./images/desktop/ice-cream-2x.png 2x
-        "
-        media="(min-width:1200px)"
-        sizes="484"
-      />
-      <source
-        srcset="
-          ./images/tablet/hero/ice-cream.png    1x,
-          ./images/tablet/hero/ice-cream-2x.png 2x
-        "
-        media="(min-width:768px)"
-        sizes="270"
-      />
-      <source
-        srcset="
-          ./images/mobile/hero/ice-cream.png    1x,
-          ./images/mobile/hero/ice-cream-2x.png 2x
-        "
-        media="(min-width:480px)"
-        sizes="170"
-      />
-
-      <img
-        src="./images/mobile/hero/ice-cream.png"
-        alt="ice-cream"
-        width="270"
-      />
-    </picture>
-    <picture class="hero__plate">
-      <source
-        srcset="
-          ./images/desktop/ice-plate.png    1x,
-          ./images/desktop/ice-plate-2x.png 2x
-        "
-        media="(min-width:1200px)"
-        sizes="225"
-      />
-      <source
-        srcset="
-          ./images/tablet/hero/ice-plate.png    1x,
-          ./images/tablet/hero/ice-plate-2x.png 2x
-        "
-        media="(min-width:768px)"
-        sizes="152"
-      />
-      <img
-        src="./images/tablet/hero/ice-plate.png"
-        alt="ice-cream"
-        width="152"
-      />
-    </picture>
-    <div class="hero__text-box">
-      <p class="hero__text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et
-      </p>
-      <a href="" class="hero__info-link">
-        <svg width="40">
-          <use href="./images/icons.svg#arrow-hero"></use>
-        </svg>
-      </a>
+        <img class="hero__big-ice" src="./images/mobile/hero/ice-cream.png" alt="ice-cream" width="484" />
+      </picture>
     </div>
   </div>
 </section>

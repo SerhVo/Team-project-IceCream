@@ -1,34 +1,92 @@
 .hero {
     padding-top: 50px;
     background-color: $bg-color;
-    // background-image: url("../../images/mobile/hero/bgr-point.png");
+    background-image: url("../../images/mobile/hero/bgr-point.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom;
+    padding-bottom: 240px;
 
+    @include mobile {
+        background-size: 480px;
+    }
+
+    @include tablet {
+        background-image: url("../../images/tablet/hero/line-hero.png");
+        background-size: 768px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    @include desktop {
+        background-image: url("../../images/desktop/line-points.png");
+        background-size: 1200px;
+        padding-top: 35px;
+        padding-bottom: 65px;
+    }
+
+    &__container {
+        position: relative;
+    }
+
+    &__cont-text {
+        @include tablet {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        @include desktop {
+            margin-bottom: 42px;
+        }
+    }
 
     &__title {
-        font-family: 'Seymour One', sans-serif;
+        font-family: "Seymour One", sans-serif;
         font-weight: 400;
         font-size: 34px;
         line-height: calc(33 / 34);
         width: 250px;
-
         text-transform: uppercase;
-
         color: $main-text-color;
         margin: 0;
         padding: 0;
         margin-bottom: 32px;
 
+        @include tablet {
+            font-size: 24px;
+            line-height: calc(13 / 24);
+            width: 190px;
+        }
+
+        @include desktop {
+            font-size: 38px;
+            line-height: calc(48 / 38);
+            letter-spacing: 0.04em;
+            width: 370px;
+            margin-bottom: 28px;
+        }
+
         &--first {
+            display: block;
             font-size: 26px;
             line-height: calc(33 / 26);
             letter-spacing: 0.04em;
             margin: 0;
             padding: 0;
-        }
 
+            @include tablet {
+                font-size: 18px;
+                line-height: calc(23 / 18);
+                margin-bottom: 5px;
+            }
+
+            @include desktop {
+                font-size: 38px;
+                line-height: calc(48 / 38);
+            }
+        }
     }
 
     &__list-link {
@@ -36,33 +94,192 @@
         align-items: center;
         text-align: center;
         gap: 8px;
-        margin-bottom: -80px;
-
     }
 
     &__link {
+        padding: 5px 10px;
         font-weight: 600;
         font-size: 8px;
         line-height: calc(10 / 8);
         color: $yellow-color;
+        text-decoration: underline;
+
+        @include desktop {
+            font-size: 14px;
+            line-height: calc(17 / 14);
+            padding: 12px 34px;
+
+            transition: color 500ms linear;
+        }
+
+        &:hover {
+            color: $green-color;
+        }
+
+        &:focus {
+            color: $white-color;
+        }
+
+        &--btn {
+            color: $secondary-text-color;
+            border: 1px solid $yellow-color;
+            border-radius: 4px;
+            padding: 5px 10px;
+            font-weight: 600;
+            font-size: 8px;
+            line-height: calc(10 / 8);
+
+            transition: color 500ms linear;
+
+            @include desktop {
+                font-size: 14px;
+                line-height: calc(17 / 14);
+                padding: 12px 34px;
+            }
+        }
+
+        &--btn:hover {
+            border: 1px solid $green-color;
+        }
+
+        &--btn:focus {
+            border: 1px solid $green-color;
+            color: $white-color;
+            outline: none;
+        }
     }
 
     &__list {
         display: none;
+
+        @include tablet {
+            display: block;
+            text-align: right;
+        }
+    }
+
+    &__item:first-child {
+        margin-bottom: 20px;
+
+        @include desktop {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__number {
+        display: block;
+        font-weight: 900;
+        font-size: 28px;
+        line-height: calc(34 / 28);
+        letter-spacing: 0.04em;
+        margin-bottom: 4px;
+
+        @include desktop {
+            font-size: 46px;
+            line-height: calc(56 / 46);
+        }
+    }
+
+    &__cafes {
+        font-weight: 400;
+        letter-spacing: 0;
+        display: block;
+        font-size: 8px;
+        line-height: calc(10 / 8);
+        color: $main-text-color;
+
+        @include desktop {
+            font-size: 14px;
+            line-height: calc(17 / 14);
+        }
+    }
+
+    &__tumb-ice {
+        position: absolute;
+        left: 15%;
+        bottom: -200px;
+        @extend .icon-box;
+        width: 210px;
+
+        @include mobile {
+            width: 210px;
+            bottom: -200px;
+            left: 20%;
+        }
+
+        @include tablet {
+            left: 50%;
+            width: 370px;
+            bottom: -75px;
+        }
+
+        @include desktop {
+            left: 47%;
+            width: 620px;
+            bottom: -162px;
+        }
     }
 
     &__big-ice {
-        position: relative;
-        left: 15%;
-        bottom: -50px;
         display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__cont-plate {
+        display: none;
+
+        @include tablet {
+            display: flex;
+            align-items: center;
+        }
     }
 
     &__plate {
-        display: none;
+        display: block;
+        width: 152px;
+
+        @include desktop {
+            width: 225px;
+        }
     }
 
     &__text-box {
-        display: none;
+        width: 150px;
+        font-size: 12px;
+        line-height: 140%;
+        color: $main-text-color;
+        margin-left: 30px;
+
+        @include desktop {
+            width: 200px;
+            font-size: 14px;
+        }
+    }
+
+    &__info-link {
+        display: block;
+        margin-top: 20px;
+        width: 40px;
+        height: 15px;
+
+        &:hover .hero__icon {
+            width: 60px;
+        }
+
+        &:focus .hero__icon {
+            stroke: $main-text-color;
+        }
+
+        @include desktop {
+            margin-top: 32px;
+        }
+    }
+
+    &__icon {
+        @extend .icon-box;
+        fill: $main-text-color;
+        width: 100%;
+        height: 100%;
     }
 }
