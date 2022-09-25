@@ -7,8 +7,8 @@
           passion
         </h1>
         <ul class="hero__list-link">
-          <li><a href="./" class="hero__link--btn">Products</a></li>
-          <li><a href="./" class="hero__link">How it’s made?</a></li>
+          <li><a href="#products" class="hero__link--btn">Products</a></li>
+          <li><a href="#about" class="hero__link">How it’s made?</a></li>
         </ul>
       </div>
       <ul class="hero__list">
@@ -25,17 +25,19 @@
       </ul>
     </div>
     <div class="hero__cont-plate">
-      <picture class="hero__plate">
-        <source srcset="
-                  ./images/desktop/ice-plate.png    1x,
-                  ./images/desktop/ice-plate-2x.png 2x
-                " media="(min-width:1200px)" sizes="225" />
-        <source srcset="
-                  ./images/tablet/hero/ice-plate.png    1x,
-                  ./images/tablet/hero/ice-plate-2x.png 2x
-                " media="(min-width:768px)" sizes="152" />
-        <img src="./images/tablet/hero/ice-plate.png" alt="ice-cream" width="225" />
-      </picture>
+      <div class="hero__tumb-plate">
+        <picture class="hero__plate">
+          <source class="hero__plate" srcset="
+                          ./images/desktop/ice-plate.png    1x,
+                          ./images/desktop/ice-plate-2x.png 2x
+                        " media="(min-width:1200px)" sizes="225" />
+          <source class="hero__plate" srcset="
+                          ./images/tablet/hero/ice-plate.png    1x,
+                          ./images/tablet/hero/ice-plate-2x.png 2x
+                        " media="(min-width:768px)" sizes="152" />
+          <img class="hero__plate" src="./images/tablet/hero/ice-plate.png" alt="ice-cream" width="225" />
+        </picture>
+      </div>
       <div class="hero__text-box">
         <p class="hero__text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -61,7 +63,7 @@
         <source class="hero__big-ice" srcset="
                   ./images/mobile/hero/ice-cream.png    1x,
                   ./images/mobile/hero/ice-cream-2x.png 2x
-                " media="(max-width:767px)" sizes="170" />
+                " media="(max-width:767px)" sizes="250" />
 
         <img class="hero__big-ice" src="./images/mobile/hero/ice-cream.png" alt="ice-cream" width="484" />
       </picture>

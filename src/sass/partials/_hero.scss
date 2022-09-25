@@ -1,6 +1,15 @@
 .hero {
     padding-top: 50px;
     background-color: $bg-color;
+@media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx){
+        background-image: url("../images/mobile/hero/bgr-point-2x.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: bottom;
+    }
+
     background-image: url("../images/mobile/hero/bgr-point.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -12,6 +21,16 @@
     }
 
     @include tablet {
+
+@media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: url("../images/tablet/hero/line-hero-2x.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom;
+    }
+
         background-image: url("../images/tablet/hero/line-hero.png");
         background-size: 768px;
         padding-top: 20px;
@@ -19,6 +38,15 @@
     }
 
     @include desktop {
+@media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: url("../images/desktop/line-points-2x.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom;
+    }
+
         background-image: url("../images/desktop/line-points.png");
         background-size: 1200px;
         padding-top: 35px;
@@ -103,6 +131,8 @@
         line-height: calc(10 / 8);
         color: $yellow-color;
         text-decoration: underline;
+        position: relative;
+            z-index: 2;
 
         @include desktop {
             font-size: 14px;
@@ -173,6 +203,7 @@
         line-height: calc(34 / 28);
         letter-spacing: 0.04em;
         margin-bottom: 4px;
+        color: $secondary-text-color;
 
         @include desktop {
             font-size: 46px;
@@ -196,15 +227,16 @@
 
     &__tumb-ice {
         position: absolute;
-        left: 15%;
-        bottom: -200px;
+        left: 9%;
+        bottom: -291px;
         @extend .icon-box;
-        width: 210px;
+        width: 300px;
 
         @include mobile {
-            width: 210px;
-            bottom: -200px;
-            left: 20%;
+            width: 300px;
+            // height: 400px;
+            bottom: -291px;
+            left: 17%;
         }
 
         @include tablet {
@@ -235,13 +267,21 @@
         }
     }
 
-    &__plate {
-        display: block;
-        width: 152px;
+&__tumb-plate{
+    @extend .icon-box;
+        @include tablet {
+                width: 152px;
+                height: 152px;
+            }
+                                        @include desktop {
+                                            width: 225px;
+                                            height: 225px;
+                                        }
+}
 
-        @include desktop {
-            width: 225px;
-        }
+    &__plate {
+        width: 100%;
+        height: 100%;
     }
 
     &__text-box {
