@@ -1,43 +1,217 @@
 .footer {
     background-color: $bg-color;
+    padding-bottom: 61px;
+    padding-top: 39px;
+
+    @include tablet {
+        padding-bottom: 13px;
+    }
+
+    @include desktop {
+
+        padding-top: 120px;
+    }
 }
 
 .footer__list {
-    display: flex;
-    align-items: center;
+    @media screen and (max-width: 768px) {
+        max-width: 280px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @include tablet {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
 }
-.footer__item {
-    align-self: end;
-}
+
 .footer__title-small {
-    
-font-style: normal;
-font-weight: 700;
-font-size: 18px;
-line-height: 22px;
-text-transform: uppercase;
-color: #FCFCFC;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: calc(22 / 18);
+    text-transform: uppercase;
+    color: $main-text-color;
+    margin-bottom: 16px;
+
+    @include tablet {
+        font-size: 26px;
+        line-height: calc(32 / 26);
+    }
+
+    @include desktop {
+        font-size: 30px;
+        line-height: calc(37 / 30);
+        font-weight: 400;
+        margin-bottom: 14px;
+    }
+
 }
 
 .footer__title-big {
+    font-style: normal;
     font-weight: 700;
-font-size: 34px;
-line-height: 41px;
-letter-spacing: 0.04em;
-text-transform: uppercase;
-color: #FCFCFC;
+    font-size: 34px;
+    line-height: calc(41 / 34);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $main-text-color;
+    margin-bottom: 42px;
+
+    @include tablet {
+
+        margin-bottom: 0;
+        font-size: 48px;
+        line-height: calc(59 / 48);
+        letter-spacing: 0.06em;
+    }
+
+    @include desktop {
+        font-size: 58px;
+        line-height: calc(71 / 58);
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+    }
+
+
+
 }
+
 .footer__text {
     font-weight: 700;
     font-size: 12px;
-    line-height: 1.86;
-    text-align: right;
-    color: #131313;
+    line-height: calc(22 / 12);
+    color: $secondary-text-color;
+    margin-top: 38px;
+
+    &>a {
+        color: $main-text-color;
+    }
+
+    @include tablet {
+        letter-spacing: normal;
+       font-size: 14px;
+        line-height: calc(26 / 14);
+        
+    }
+
+    @include desktop {
+        margin-top: 40px;
+        letter-spacing: 0.02em;
+        font-size: 16px;
+        line-height: calc(30 / 16);
+    }
 }
+
 .footer__text-res {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.52;
     text-align: center;
     color: #7A7A7A;
+    
+
+    @include tablet {
+        margin: 0 2px 0 0;
+    }
+}
+
+.footer__border {
+    display: block;
+    border: 1px solid #E1E1E1;
+    background-color: #E1E1E1;
+    margin-top: 40px;
+    margin-bottom: 16px;
+
+    @include desktop {
+        margin-top: 60px;
+        margin-bottom: 12px;
+    }
+}
+
+.footer__item-title {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    
+}
+
+.footer__item-social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
+    @include desktop {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}
+
+.social-icons__list {
+    display: flex;
+
+    gap: 28px;
+
+    @include desktop {
+        gap: 30px;
+    }
+}
+
+
+.social-icon__image {
+    height: 34px;
+    width: 34px;
+    fill: $bg-color;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-icon__link {
+    height: 34px;
+    width: 34px;
+    background-color: $yellow-color;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:focus {
+        height: 38.3px;
+        width: 38.3px;
+        ;
+    }
+
+    &:focus .social-icon__image {
+        fill: $main-text-color;
+    }
+
+    &:hover .social-icon__image {
+        fill: $main-text-color;
+    }
+
+}
+
+.footer-right {
+
+    
+
+    @include tablet {
+    display: flex;
+    justify-content: center;
+
+
+
+}
+
+@include desktop {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: calc(22 / 12);
+    letter-spacing: 0.02em;
+}
+
 }
