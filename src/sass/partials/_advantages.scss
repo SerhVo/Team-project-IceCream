@@ -1,0 +1,210 @@
+.advantages {
+  padding-top: 42px;
+  padding-bottom: 60;
+
+  background-color: $bg-color;
+
+  @include tablet {
+    padding-top: 53px;
+    padding-bottom: 204px;
+  }
+  @include desktop {
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 89px;
+    padding-bottom: 180px;
+  }
+}
+.advantages__list {
+  display: block;
+
+  @include mobile {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  @include tablet {
+    display: flex;
+    width: 616px;
+    gap: 80px;
+  }
+  @include desktop {
+    display: flex;
+    width: 1168px;
+    gap: 32px;
+  }
+}
+.advantages__item {
+  width: 230px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include tablet {
+    width: 152px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  @include desktop {
+    width: 368px;
+  }
+}
+.advantages__icon {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.advantages__number-1 {
+  display: block;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: $main-text-color;
+
+  margin-top: 16px;
+
+  @include tablet {
+    font-size: 48px;
+    line-height: 1.23;
+    margin-top: 32px;
+  }
+  @include desktop {
+    font-size: 58px;
+    line-height: 1.22;
+    margin-top: 40px;
+  }
+}
+.advantages__number-2 {
+  display: block;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: $main-text-color;
+
+  margin-top: 16px;
+
+  @include tablet {
+    font-size: 48px;
+    line-height: 1.23;
+    margin-top: 32px;
+    text-transform: none;
+  }
+  @include desktop {
+    font-size: 58px;
+    line-height: 1.22;
+    margin-top: 40px;
+  }
+}
+.advantages__number-3 {
+  display: block;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: $main-text-color;
+
+  margin-top: 16px;
+
+  @include tablet {
+    font-size: 48px;
+    line-height: 1.23;
+    margin-top: 32px;
+    text-transform: none;
+  }
+  @include desktop {
+    font-size: 58px;
+    line-height: 1.22;
+    margin-top: 40px;
+  }
+}
+.advantages__text-1 {
+  display: block;
+
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.7;
+  text-align: center;
+  letter-spacing: 0;
+  color: $main-text-color;
+
+  margin-top: 18px;
+  margin-bottom: 28px;
+
+  @include tablet {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.74;
+    margin-bottom: 0;
+    margin-top: 16px;
+  }
+  @include desktop {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.76;
+    letter-spacing: 0.02em;
+  }
+}
+.advantages__text-2 {
+  display: block;
+
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.7;
+  text-align: center;
+  letter-spacing: 0;
+  color: $main-text-color;
+
+  margin-top: 18px;
+  margin-bottom: 22px;
+
+  @include tablet {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.74;
+    margin-bottom: 0;
+    margin-top: 16px;
+  }
+  @include desktop {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.76;
+    letter-spacing: 0.02em;
+  }
+}
+.advantages__text-3 {
+  display: block;
+
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.7;
+  text-align: center;
+  letter-spacing: 0;
+  color: $main-text-color;
+
+  margin-top: 18px;
+
+  @include tablet {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.74;
+    margin-bottom: 0;
+    margin-top: 16px;
+  }
+  @include desktop {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.76;
+    letter-spacing: 0.02em;
+  }
+}
