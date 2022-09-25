@@ -1,0 +1,43 @@
+.footer {
+    background-color: $bg-color;
+}
+
+.footer__list {
+    display: flex;
+    align-items: center;
+}
+.footer__item {
+    align-self: end;
+}
+.footer__title-small {
+    
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 22px;
+text-transform: uppercase;
+color: #FCFCFC;
+}
+
+.footer__title-big {
+    font-weight: 700;
+font-size: 34px;
+line-height: 41px;
+letter-spacing: 0.04em;
+text-transform: uppercase;
+color: #FCFCFC;
+}
+.footer__text {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.86;
+    text-align: right;
+    color: #131313;
+}
+.footer__text-res {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.52;
+    text-align: center;
+    color: #7A7A7A;
+}

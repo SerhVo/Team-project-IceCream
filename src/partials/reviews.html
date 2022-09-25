@@ -1,91 +1,94 @@
-<section class="reviews">
-  <div class="container">
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div>
-            <picture>
-              <source
-                srcset="
-                  ./images/client/photo1.png    1x,
-                  ./images/client/photo1-2x.png 2x
-                "
-              />
-              <img src="./images/client/photo1.png" alt="Emily photo" />
-            </picture>
-            <div class="reviews__field">
-              <p>
-                I love visiting your cafe. You prepare the most delicious ice
-                cream in Los Angeles! In addition, you have beautiful serving,
-                cozy atmosphere and polite staff.
-              </p>
+<section class="reviews" id="reviews">
+  <div class="container container-reviews">
+    <h2 class="visually-hidden">reviews</h2>
+    <div>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide reviews__thumb">
+            <div>
+              <picture class="reviews__photo">
+                <source
+                  srcset="
+                    ./images/client/photo1.png    1x,
+                    ./images/client/photo1-2x.png 2x
+                  "
+                />
+                <img src="./images/client/photo1.png" alt="Emily photo" />
+              </picture>
+              <div class="reviews__field">
+                <p>
+                  I love visiting your cafe. You prepare the most delicious ice
+                  cream in Los Angeles! In addition, you have beautiful serving,
+                  cozy atmosphere and polite staff.
+                </p>
+              </div>
+              <p class="reviews__name">Emily, Los Angeles</p>
             </div>
-            <p class="reviews__name">Emily, Los Angeles</p>
+          </div>
+          <div class="swiper-slide reviews__thumb">
+            <div>
+              <picture class="reviews__photo">
+                <source
+                  srcset="
+                    ./images/client/photo2.png    1x,
+                    ./images/client/photo2-2x.png 2x
+                  "
+                />
+                <img src="./images/client/photo2.png" alt="Sam photo" />
+              </picture>
+              <div class="reviews__field">
+                <p>
+                  I love eating popsicles on a hot day. Yours is always
+                  delicious. I recommend your cafe to everyone I know.
+                </p>
+              </div>
+              <p class="reviews__name">Sam, Los Angeles</p>
+            </div>
+          </div>
+          <div class="swiper-slide reviews__thumb">
+            <div>
+              <picture class="reviews__photo">
+                <source
+                  srcset="
+                    ./images/client/photo3.png    1x,
+                    ./images/client/photo3-2x.png 2x
+                  "
+                />
+                <img src="./images/client/photo3.png" alt="Diana photo" />
+              </picture>
+              <div class="reviews__field">
+                <p>
+                  Ice cream is my passion! I love your chocolate hazelnut ice
+                  cream! And I really like the excellent service - always served
+                  politely and quickly!
+                </p>
+              </div>
+              <p class="reviews__name">Diana, Chicago</p>
+            </div>
+          </div>
+          <div class="swiper-slide reviews__thumb">
+            <div>
+              <picture class="reviews__photo">
+                <source
+                  srcset="
+                    ./images/client/photo4.png    1x,
+                    ./images/client/photo4-2x.png 2x
+                  "
+                />
+                <img src="./images/client/photo4.png" alt="Bryan photo" />
+              </picture>
+              <div class="reviews__field">
+                <p>
+                  Every day we come to you with friends after classes in
+                  college. We love your ice cream and casual atmosphere!
+                </p>
+              </div>
+              <p class="reviews__name">Bryan, New-York</p>
+            </div>
           </div>
         </div>
-        <div class="swiper-slide">
-          <div>
-            <picture>
-              <source
-                srcset="
-                  ./images/client/photo2.png    1x,
-                  ./images/client/photo2-2x.png 2x
-                "
-              />
-              <img src="./images/client/photo2.png" alt="Sam photo" />
-            </picture>
-            <div class="reviews__field">
-              <p>
-                I love eating popsicles on a hot day. Yours is always delicious.
-                I recommend your cafe to everyone I know.
-              </p>
-            </div>
-            <p class="reviews__name">Sam, Los Angeles</p>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div>
-            <picture>
-              <source
-                srcset="
-                  ./images/client/photo3.png    1x,
-                  ./images/client/photo3-2x.png 2x
-                "
-              />
-              <img src="./images/client/photo3.png" alt="Diana photo" />
-            </picture>
-            <div class="reviews__field">
-              <p>
-                Ice cream is my passion! I love your chocolate hazelnut ice
-                cream! And I really like the excellent service - always served
-                politely and quickly!
-              </p>
-            </div>
-            <p class="reviews__name">Diana, Chicago</p>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div>
-            <picture>
-              <source
-                srcset="
-                  ./images/client/photo4.png    1x,
-                  ./images/client/photo4-2x.png 2x
-                "
-              />
-              <img src="./images/client/photo4.png" alt="Bryan photo" />
-            </picture>
-            <div class="reviews__field">
-              <p>
-                Every day we come to you with friends after classes in college.
-                We love your ice cream and casual atmosphere!
-              </p>
-            </div>
-            <p class="reviews__name">Bryan, New-York</p>
-          </div>
-        </div>
+        <div class="swiper-pagination"></div>
       </div>
-      <div class="swiper-pagination"></div>
     </div>
   </div>
 </section>
