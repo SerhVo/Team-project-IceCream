@@ -3,22 +3,18 @@
   padding-right: 0px;
   padding-top: 60px;
   padding-bottom: 0;
-  margin-bottom: 42px;
 
   background-color: $bg-color;
-
-  @include tablet {
-    margin-bottom: 53px;
-  }
-  @include desktop {
-    margin-bottom: 89px;
-  }
 }
 .about-title {
-  width: 210px;
+  min-width: 210px;
   margin-left: auto;
   margin-right: auto;
 
+  @include mobile {
+    width: 400px;
+    text-align: center;
+  }
   @include tablet {
     width: 454px;
   }
@@ -61,7 +57,14 @@
   text-transform: uppercase;
 
   margin-bottom: 32px;
+  padding-right: 30px;
+  padding-left: 30px;
 
+  @include mobile {
+    white-space: nowrap;
+    padding-left: 0;
+    padding-right: 0;
+  }
   @include tablet {
     font-size: 34px;
     line-height: 1.26;
@@ -94,7 +97,7 @@
   width: 279.3px;
 
   @include tablet {
-    width: 336px;
+    min-width: 336px;
     margin-left: 0;
     margin-right: 0;
   }
@@ -132,7 +135,6 @@
 }
 .circle-2 {
   position: absolute;
-  //   left: 9.12px;
   top: 21.82px;
   width: 278.19px;
   height: 278.25px;
@@ -152,26 +154,50 @@
   @include desktop {
     width: 490px;
     height: 490px;
-    // border-radius: 1852.2px;
     border-radius: 50%;
     top: 39px;
-    // left: 8px;
     right: 8px;
   }
 }
+.about__container {
+  padding-left: 0px;
+  padding-right: 0px;
+
+  @include mobile {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  @include tablet {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  @include desktop {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
 .about-text {
-  display: block;
-  width: 220px;
+  min-width: 220px;
   margin-top: 62px;
   margin-bottom: 20px;
   margin-right: auto;
   margin-left: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+
   align-items: center;
 
+  @include mobile {
+    width: 440px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
   @include tablet {
     width: 334px;
     margin-top: 7px;
     margin-bottom: 48px;
+    padding-left: 0;
+    padding-right: 0;
   }
   @include desktop {
     margin-top: 90px;
@@ -179,6 +205,7 @@
   }
 }
 .about-text__paragraph-1 {
+  font-weight: 400;
   font-size: 12px;
   line-height: 1.76;
   text-align: center;
@@ -192,6 +219,7 @@
   }
 }
 .about-text__paragraph-2 {
+  font-weight: 400;
   font-size: 12px;
   line-height: 1.62;
   text-align: center;
@@ -251,13 +279,13 @@
     margin-right: auto;
     margin-left: 0;
   }
-}
-.about__btn:hover,
-.about__btn:focus {
-  background-color: $green-color;
-}
-.about__btn:focus {
-  color: $main-text-color;
+  &:hover,
+  &:focus {
+    background-color: $green-color;
+  }
+  &:focus {
+    color: $main-text-color;
+  }
 }
 .about__btn-icon {
   display: inline-block;
