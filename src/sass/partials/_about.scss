@@ -173,33 +173,12 @@
     }
   }
 }
-.about__container {
-  padding-left: 0px;
-  padding-right: 0px;
-
-  @include mobile {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-  @include tablet {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-  @include desktop {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-}
-.about-text {
+.about-text__container {
   min-width: 220px;
   margin-top: 62px;
-  margin-bottom: 20px;
-  margin-right: auto;
-  margin-left: auto;
+
   padding-left: 30px;
   padding-right: 30px;
-
-  align-items: center;
 
   @include mobile {
     width: 440px;
@@ -209,7 +188,6 @@
   @include tablet {
     width: 334px;
     margin-top: 7px;
-    margin-bottom: 48px;
     padding-left: 0;
     padding-right: 0;
   }
@@ -218,33 +196,34 @@
     width: 463px;
   }
 }
-.about-text__paragraph-1 {
-  font-weight: 400;
+.about-text {
   font-size: 12px;
-  line-height: 1.76;
   text-align: center;
-  letter-spacing: 0.04em;
 
   @include tablet {
     text-align: left;
+  }
+}
+.about-text__paragraph-1 {
+  line-height: 1.76;
+  margin-bottom: 4px;
+
+  @include tablet {
+    margin-bottom: 8px;
   }
   @include desktop {
     font-size: 16px;
   }
 }
 .about-text__paragraph-2 {
-  font-weight: 400;
-  font-size: 12px;
   line-height: 1.62;
-  text-align: center;
   letter-spacing: 0em;
-  margin-top: 4px;
+  margin-bottom: 20px;
 
   @include tablet {
     line-height: 1.76;
     letter-spacing: 0.04em;
-    text-align: left;
-    margin-top: 8px;
+    margin-bottom: 8px;
   }
   @include desktop {
     font-size: 14px;
@@ -256,17 +235,13 @@
 
   @include tablet {
     display: block;
-    font-weight: 400;
-    font-size: 12px;
     line-height: 1.94;
-    letter-spacing: 0.04em;
-
-    text-align: left;
-    margin-top: 8px;
+    margin-bottom: 48px;
+    width: 264px;
   }
   @include desktop {
-    display: block;
     font-size: 14px;
+    width: 463px;
   }
 }
 .about__btn {
@@ -289,10 +264,9 @@
   margin-right: auto;
   margin-left: auto;
 
-  @include tablet {
-    margin-right: auto;
-    margin-left: 0;
-  }
+  cursor: pointer;
+  transition: background-color 500ms linear, color 500ms linear;
+
   &:hover,
   &:focus {
     background-color: $green-color;
@@ -300,10 +274,13 @@
   &:focus {
     color: $main-text-color;
   }
+  @include tablet {
+    margin-right: auto;
+    margin-left: 0;
+  }
 }
 .about__btn-icon {
   display: inline-block;
-
   height: 12px;
   width: 12px;
   fill: transparent;
