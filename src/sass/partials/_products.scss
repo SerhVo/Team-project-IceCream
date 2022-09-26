@@ -1,28 +1,19 @@
-// @mixin retina {
-//     @media (min-device-pixel-ratio: 2),
-//       (-webkit-min-device-pixel-ratio: 2),
-//       (min-resolution: 192dpi),
-//       (min-resolution: 2dppx) {
-//       @content;
-//     }
-//   }
-
 .products {
     color: $secondary-text-color;
     padding-top: 60px;
     padding-bottom: 60px;
     background-image: url('../images/tablet/bgr/bgr-1.png');
 
-    // @include retina {
-    //     background-image: url('.././images/tablet/bgr/bgr-1-2x.png');
-    // }
+    @include retina-bg {
+        background-image: url('.././images/tablet/bgr/bgr-1-2x.png');
+    }
 
     @media screen and (min-width: 768px) {
         background-image: url('.././images/desktop/bgr/block2.jpg');
 
-        // @include retina {
-        //     background-image: url('.././images/desktop/bgr/block2-2x.jpg');
-        // }
+        @include retina-bg {
+            background-image: url('.././images/desktop/bgr/block2-2x.jpg');
+        }
     }
 }
 
@@ -87,9 +78,9 @@
     }
 
     @media screen and (min-width: 768px) and (max-width: 1199px) {
-        max-width: 224px;
+        min-width: 224px;
         min-height: 428px;
-        padding: 108px 26px 20px 20px;
+        padding: 115px 26px 20px 20px;
     }
 
     @media screen and (min-width: 1200px) {
@@ -147,12 +138,22 @@
     bottom: 75%;
     transform: translateX(-50%);
 
+    @include retina-bg {
+        background-image: url(.././images/mobile/ice-2x.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
     @media screen and (min-width: 768px) and (max-width: 1199px) {
-        // top: -115px;
-        // left: 13px;
         background-image: url(".././images/tablet/ice-cream.png");
         width: 200px;
         height: 208px;
+
+        @include retina-bg {
+            background-image: url(.././images/tablet/ice-cream-2x.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
     }
 
     @media screen and (min-width: 1200px) {
@@ -161,6 +162,12 @@
         background-image: url(".././images/desktop/ice.png");
         width: 304px;
         height: 318px;
+
+        @include retina-bg {
+            background-image: url(.././images/desktop/ice-2x.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
     }
 }
 
@@ -180,12 +187,24 @@
     bottom: 75%;
     transform: translateX(-50%);
 
+    @include retina-bg {
+        background-image: url(.././images/mobile/coffe-2x.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
     @media screen and (min-width: 768px) and (max-width: 1199px) {
         // top: -115px;
         // left: 13px;
         background-image: url(".././images/tablet/coffe.png");
         width: 200px;
         height: 208px;
+
+        @include retina-bg {
+            background-image: url(.././images/tablet/coffe-2x.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
     }
 
     @media screen and (min-width: 1200px) {
@@ -194,6 +213,12 @@
         background-image: url(".././images/desktop/coffi.png");
         width: 304px;
         height: 318px;
+
+        @include retina-bg {
+            background-image: url(.././images/desktop/coffi-2x.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
     }
 }
 
@@ -212,12 +237,24 @@
     bottom: 75%;
     transform: translateX(-50%);
 
+    @include retina-bg {
+        background-image: url(.././images/mobile/coc-2x.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
     @media screen and (min-width: 768px) and (max-width: 1199px) {
         // top: -115px;
         // left: 13px;
         background-image: url(".././images/tablet/coc.png");
         width: 200px;
         height: 208px;
+
+        @include retina-bg {
+            background-image: url(.././images/tablet/coc-2x.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
     }
 
     @media screen and (min-width: 1200px) {
@@ -226,6 +263,12 @@
         background-image: url(".././images/desktop/cocktail.png");
         width: 304px;
         height: 318px;
+
+        @include retina-bg {
+            background-image: url(.././images/desktop/cocktail-2x.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
     }
 }
 
@@ -284,11 +327,6 @@
     height: 100%;
 }
 
-// .products__arrow:hover,
-// .products__arrow:focus {
-//     transform: scale(1.1);
-// }
-
 .modal-ingr {
     width: 280px;
     background-color: #F5F5F5;
@@ -304,6 +342,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 10;
 
     @media screen and (min-width: 768px) {
         width: 568px;
@@ -324,10 +363,6 @@
     right: 20;
     border: none;
     background-color: #F5F5F5;
-}
-
-.modal__btn-img {
-    
 }
 
 .modal-ingr__title {
