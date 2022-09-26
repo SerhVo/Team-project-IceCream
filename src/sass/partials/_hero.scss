@@ -25,7 +25,7 @@
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
       background-image: url('../images/tablet/hero/line-hero-2x.png');
-      background-size: contain;
+      background-size: 768px;
       background-repeat: no-repeat;
       background-position: bottom;
     }
@@ -41,7 +41,7 @@
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
       background-image: url('../images/desktop/line-points-2x.png');
-      background-size: contain;
+      background-size: 1200px;
       background-repeat: no-repeat;
       background-position: bottom;
     }
@@ -226,7 +226,7 @@
 
   &__tumb-ice {
     position: absolute;
-    left: 9%;
+    left: 8%;
     bottom: -291px;
     @extend .icon-box;
     width: 300px;
@@ -234,12 +234,13 @@
     animation-name: big-ice;
     animation-duration: 3000ms;
     animation-delay: 1000ms;
+    animation-timing-function: linear;
 
     @include mobile {
       width: 300px;
       // height: 400px;
       bottom: -291px;
-      left: 17%;
+      left: 16%;
     }
 
     @include tablet {
@@ -330,12 +331,24 @@
 
 @keyframes big-ice {
   0% {
-    opacity: 0;
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  25% {
+    opacity: 0.2;
     transform: scale(0.5);
   }
 
   50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  75% {
+    opacity: 0.5;
     transform: scale(1.5);
+
   }
 
   100% {

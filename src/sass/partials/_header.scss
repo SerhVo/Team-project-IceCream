@@ -1,3 +1,10 @@
+.icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: currentColor;
+}
+
 .header {
   background-color: $bg-color;
   padding: 12px 0;
@@ -97,11 +104,13 @@
 }
 
 .open-mob_menu {
+  position: relative;
   @extend .icon-box;
   fill: $btn-color-white;
   background-color: transparent;
   border: none;
   cursor: pointer;
+z-index: 2;
 
   @include desktop {
     display: none;
@@ -171,6 +180,10 @@
   transform: translateX(100%);
   transition: transform 500ms linear;
 
+  overflow-y: scroll;
+
+
+
   @include desktop {
     display: none;
   }
@@ -186,6 +199,10 @@
     padding: 0 20px;
     padding-bottom: 50px;
     padding-top: 12px;
+
+        @include tablet {
+           justify-content: start;
+          }
   }
 
   &__nav {
@@ -355,3 +372,4 @@
     }
   }
 }
+

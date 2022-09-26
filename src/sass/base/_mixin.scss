@@ -16,13 +16,6 @@
     }
 }
 
-.icon-box{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    fill: currentColor;
-}
-
 @mixin retina-bg {
     @media (min-device-pixel-ratio: 2),
         (-webkit-min-device-pixel-ratio: 2),
