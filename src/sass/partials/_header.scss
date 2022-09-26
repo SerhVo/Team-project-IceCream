@@ -272,8 +272,9 @@ z-index: 2;
   width: 100%;
   height: 100%;
   z-index: 5;
-  background-color: rgba (174, 198, 165, 0.8);
+  background-color: rgba (174, 198, 165, 1);
   opacity: 1;
+  overflow-y: scroll;
   @extend .icon-box;
 
   &.buynow-hidden {
@@ -300,31 +301,142 @@ z-index: 2;
 
 .buy-modal {
   position: relative;
-  width: 570px;
+  width: 100%;
+  height: 100%;
   background-color: $main-text-color;
   border: 1px solid $yellow-color;
   border-radius: 10px;
   padding: 32px 52px;
   text-align: center;
+      @include tablet {
+          width: 570px;
+            height: 650px;
+
+        }
   &__list {
     display: flex;
-    gap: 32px;
+    flex-direction: column;
+      margin-bottom: 24px;
+justify-content: center;
+align-items: center;
+          @include tablet {
+            flex-direction: row;
+              gap: 32px;
     align-items: center;
-    color: $secondary-text-color;
-    font-size: 16px;
-    line-height: calc(20 / 16);
-    text-align: center;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
     margin-bottom: 40px;
+            }
+    
   }
+  &__product{
+    color: $secondary-text-color;
+      font-size: 16px;
+      line-height: calc(20 / 16);
+      text-align: center;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;  }
+
+&__item{
+  &--ice{
+              position: relative;
+    border: 2px solid $lite-green;
+      border-radius: 15px;
+margin-bottom: 84px;
+
+
+      padding-top: 95px;
+          padding-bottom: 20px;
+          width: 130px;
+
+          @include tablet {
+margin-bottom: 0;            }
+
+    &::before {
+          content: '';
+          position: absolute;
+          top: -50px;
+    background-image: url(".././images/tablet/ice-cream.png");
+          display: block;
+          width: 130px;
+          height: 130px;
+          background-position: center;
+          background-size: cover;
+          box-shadow: 0px 8px 30px rgba(10, 136, 23, 0.25);
+          border-radius: 50%;
+        
+            @include retina-bg {
+                background-image: url(.././images/tablet/ice-cream-2x.png);
+              }
+  }
+}
+  &--coffee {
+              position: relative;
+        border: 2px solid $lite-yellow;
+        background-color: $lite-yellow;
+          border-radius: 15px;
+margin-bottom: 84px;
+
+
+              padding-bottom: 20px;
+                    padding-top: 95px;
+
+          @include tablet {
+              margin-bottom: 0;
+            }
+
+          width: 130px;
+            &::before {
+                content: '';
+                          position: absolute;
+                            top: -50px;
+                background-image: url(".././images/tablet/coffe.png");
+                display: block;
+                width: 130px;
+                height: 130px;
+                background-position: center;
+                background-size: cover;
+                box-shadow: 0px 8px 30px rgba(10, 136, 23, 0.25);
+                border-radius: 50%;
+            
+                @include retina-bg {
+                  background-image: url(.././images/tablet/coffe-2x.png);
+                }
+              }
+   }
+   &--coc{
+              position: relative;
+        border: 2px solid $lite-orange;
+          border-radius: 15px;
+              padding-bottom: 20px;
+                    padding-top: 95px;
+                              width: 130px;
+            &::before {
+                content: '';
+                          position: absolute;
+                            top: -50px;
+                background-image: url(".././images/tablet/coc.png");
+                display: block;
+                width: 130px;
+                height: 130px;
+                background-position: center;
+                background-size: cover;
+                box-shadow: 0px 8px 30px rgba(10, 136, 23, 0.25);
+                border-radius: 50%;
+            
+                @include retina-bg {
+                  background-image: url(.././images/tablet/coc-2x.png);
+                }
+              }
+   }
+
+}
+
   &__title {
     font-family: 'Seymour One', sans-serif;
     font-weight: 400;
     font-size: 20px;
     line-height: calc(28 / 20);
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 103px;
 
     color: $secondary-text-color;
   }
@@ -334,8 +446,11 @@ z-index: 2;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 16px;
-    width: 370px;
-    &:last-child {
+    width: 100%;
+      @include tablet {
+          width: 370px;
+        }    
+        &:last-child {
       margin-bottom: 32px;
     }
   }
@@ -361,6 +476,8 @@ z-index: 2;
     padding: 11px 16px;
     border: 1px solid $bg-color;
     border-radius: 10px;
+    resize: none;
+      overflow: auto;
     &:focus {
       outline: 1px solid $green-color;
     }
@@ -371,5 +488,31 @@ z-index: 2;
       color: $secondary-text-color;
     }
   }
-}
+  &__btn{
+    font-weight: 600;
+      font-size: 14px;
+      line-height: calc(17 / 14);
+      text-align: center;
+      padding: 12px 0;
+      cursor: pointer;
+      width: 150px;
+      background-color: $yellow-color;
+      border: none;
+      border-radius: 10px;
+      color: $secondary-text-color;
+    
+      transition: background-color 500ms linear, color 500ms linear;
+          
+      &:hover {
+        background-color: $green-color;
+          }
+    
+      &:focus {
+        background-color: $green-color;
+        color: $white-color;
+    
+      }
+    }
+  }
+
 

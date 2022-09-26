@@ -5,7 +5,7 @@
         <source
           srcset="./images/desktop/Logo.png 1x, ./images/desktop/Logo-2x.png 2x"
           media="(min-width:1200px)"
-          sizes="60"
+          width="60"
         />
         <source
           srcset="
@@ -13,7 +13,7 @@
             ./images/tablet/hero/logo-2x.png 2x
           "
           media="(min-width:768px)"
-          sizes="48"
+          width="48"
         />
         <source
           srcset="
@@ -21,7 +21,7 @@
             ./images/mobile/hero/logo-2x.png 2x
           "
           media="(max-width:767px)"
-          sizes="40"
+          width="40"
         />
 
         <img src="./images/mobile/hero/logo.png" alt="logo" width="60" />
@@ -57,7 +57,7 @@
               ./images/desktop/Logo-2x.png 2x
             "
             media="(min-width:1200px)"
-            sizes="60"
+            width="60"
           />
           <source
             srcset="
@@ -65,7 +65,7 @@
               ./images/tablet/hero/logo-2x.png 2x
             "
             media="(min-width:768px)"
-            sizes="48"
+            width="48"
           />
           <source
             srcset="
@@ -73,7 +73,7 @@
               ./images/mobile/hero/logo-2x.png 2x
             "
             media="(max-width:767px)"
-            sizes="40"
+            width="40"
           />
 
           <img src="./images/mobile/hero/logo.png" alt="logo" width="60" />
@@ -100,7 +100,7 @@
           </li>
         </ul>
       </nav>
-      <button type="button" class="buy-now">
+      <button type="button" class="buy-now" data-buymenu-open>
         Buy now
         <svg width="12" height="12" class="buy-now__icon">
           <use href="./images/icons.svg#vector-btn"></use>
@@ -118,13 +118,13 @@
       </button>
       <h2 class="buy-modal__title">Buy now</h2>
       <ul class="buy-modal__list">
-        <li class="buy-modal__item">
+        <li class="buy-modal__item--ice">
           <h3 class="buy-modal__product">ice cream</h3>
         </li>
-        <li class="buy-modal__item">
+        <li class="buy-modal__item--coffee">
           <h3 class="buy-modal__product">ice coffee</h3>
         </li>
-        <li class="buy-modal__item">
+        <li class="buy-modal__item--coc">
           <h3 class="buy-modal__product">milkshakes</h3>
         </li>
       </ul>
@@ -134,24 +134,23 @@
             class="buy-modal__input"
             type="text"
             name="name"
-            placeholder="name"
+            placeholder="Name"
         /></label>
         <label class="buy-modal__label"
           ><input
             class="buy-modal__input"
             type="tel"
             name="phone"
-            placeholder="phone"
+            placeholder="Phone"
         /></label>
         <label class="buy-modal__label">
           <textarea
             class="buy-modal__textarea"
-            type="text"
-            name="coment"
-            placeholder="coment"
+            name="comment"
+            placeholder="Comment"
           ></textarea>
         </label>
-        <button type="submit" class="header__buy-now buy-now">Submit</button>
+        <button type="submit" class="buy-modal__btn">Submit</button>
       </form>
     </div>
   </div>
