@@ -64,13 +64,16 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-image: url(../images/cow-in-yellow-circle.png);
+    background-image: url(../images/desktop/cow-in-yellow-circle-1x.png);
     background-size: cover;
     background-repeat: no-repeat;
     margin-bottom: 16px;
     margin-right: auto;
     margin-left: auto;
 
+    @include retina-bg {
+      background-image: url('../images/desktop/cow-in-yellow-circle-2x.png');
+    }
     @include tablet {
       margin-bottom: 32px;
     }
@@ -104,12 +107,16 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-image: url(../images/weight-in-yellow-circle.png);
+    background-image: url(../images/desktop/weight-in-yellow-circle-1x.png);
     background-size: cover;
     background-repeat: no-repeat;
     margin-bottom: 16px;
     margin-right: auto;
     margin-left: auto;
+
+    @include retina-bg {
+      background-image: url('../images/desktop/weight-in-yellow-circle-2x.png');
+    }
 
     @include tablet {
       margin-bottom: 32px;
@@ -145,12 +152,16 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-image: url(../images/ice-cream-in-yellow-circle.png);
+    background-image: url(../images/desktop/ice-cream-in-yellow-circle-1x.png);
     background-size: cover;
     background-repeat: no-repeat;
     margin-bottom: 16px;
     margin-right: auto;
     margin-left: auto;
+
+    @include retina-bg {
+      background-image: url('../images/desktop/ice-cream-in-yellow-circle-2x.png');
+    }
 
     @include tablet {
       margin-bottom: 32px;

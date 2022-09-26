@@ -140,23 +140,37 @@
   height: 278.25px;
   border-radius: 140.182px;
 
-  background-image: url('../images/cow-2x.jpeg');
+  background-image: url('../images/mobile/cow-mob-1x.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
+  @include retina-bg {
+    background-image: url('../images/mobile/cow-mob-2x.png');
+  }
+
   @include tablet {
+    background-image: url('../images/tablet/cow-tab-1x.png');
     width: 334.65px;
     height: 330px;
     border-radius: 1228.96px;
     top: 25.88px;
+
+    @include retina-bg {
+      background-image: url('../images/tablet/cow-tab-2x.png');
+    }
   }
   @include desktop {
+    background-image: url('../images/desktop/cow-desk-1x.png');
     width: 490px;
     height: 490px;
     border-radius: 50%;
     top: 39px;
     right: 8px;
+
+    @include retina-bg {
+      background-image: url('../images/desktop/cow-desk-2x.png');
+    }
   }
 }
 .about__container {
