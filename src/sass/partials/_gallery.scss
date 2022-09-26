@@ -5,22 +5,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url(../images/mobile/bgr/bgr-f2.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-image: url(../images/tablet/bgr/bgr-2.png);
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // background-size: cover;
     @include retina-bg{
-            background-image: url(../images/mobile/bgr/bgr-f2-2x.png);
+            background-image: url(../images/tablet/bgr/bgr-2-2x.png);
         }
 
     @include tablet{
-        background-size: cover;
-        background-image: url(../images/tablet/bgr/bgr-2.png);
-        @include retina-bg{
-                background-image: url(../images/tablet/bgr/bgr-2-2x.png);
-            }
-    }
-    @include desktop{
         background-image: url(../images/desktop/bgr/block4.jpg);
         @include retina-bg{
                 background-image: url(../images/desktop/bgr/block4-2x.jpg);
