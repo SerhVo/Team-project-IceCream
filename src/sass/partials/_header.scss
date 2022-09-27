@@ -110,7 +110,7 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
-z-index: 2;
+  z-index: 2;
 
   @include desktop {
     display: none;
@@ -182,8 +182,6 @@ z-index: 2;
 
   overflow-y: scroll;
 
-
-
   @include desktop {
     display: none;
   }
@@ -200,9 +198,9 @@ z-index: 2;
     padding-bottom: 50px;
     padding-top: 12px;
 
-        @include tablet {
-           justify-content: start;
-          }
+    @include tablet {
+      justify-content: start;
+    }
   }
 
   &__nav {
@@ -300,135 +298,169 @@ z-index: 2;
 }
 
 .buy-modal {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  overflow-y: scroll;
   background-color: $main-text-color;
   border: 1px solid $yellow-color;
   border-radius: 10px;
   padding: 32px 52px;
   text-align: center;
-      @include tablet {
-          width: 570px;
-            height: 650px;
-
-        }
+  @include tablet {
+    position: relative;
+    width: 570px;
+    height: 650px;
+  }
   &__list {
     display: flex;
     flex-direction: column;
-      margin-bottom: 24px;
-justify-content: center;
-align-items: center;
-          @include tablet {
-            flex-direction: row;
-              gap: 32px;
+    margin-bottom: 24px;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 40px;
-            }
-    
+    @include tablet {
+      flex-direction: row;
+      gap: 32px;
+      align-items: center;
+      margin-bottom: 40px;
+    }
   }
-  &__product{
+  &__product {
     color: $secondary-text-color;
-      font-size: 16px;
-      line-height: calc(20 / 16);
-      text-align: center;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;  }
+    font-size: 16px;
+    line-height: calc(20 / 16);
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
 
-&__item{
-  &--ice{
-              position: relative;
-    border: 2px solid $lite-green;
+  &__item {
+    &--ice {
+      position: relative;
+      border: 2px solid $lite-green;
       border-radius: 15px;
-margin-bottom: 84px;
-
+      margin-bottom: 84px;
 
       padding-top: 95px;
-          padding-bottom: 20px;
-          width: 130px;
+      padding-bottom: 20px;
+      width: 130px;
 
-          @include tablet {
-margin-bottom: 0;            }
+      animation-name: buy-ice;
+      animation-duration: 2000ms;
+      animation-timing-function: linear;
+      animation-delay: 1000ms;
+      animation-iteration-count: infinite;
 
-    &::before {
-          content: '';
-          position: absolute;
-          top: -50px;
-    background-image: url(".././images/tablet/ice-cream.png");
-          display: block;
-          width: 130px;
-          height: 130px;
-          background-position: center;
-          background-size: cover;
-          box-shadow: 0px 8px 30px rgba(10, 136, 23, 0.25);
-          border-radius: 50%;
-        
-            @include retina-bg {
-                background-image: url(.././images/tablet/ice-cream-2x.png);
-              }
-  }
-}
-  &--coffee {
-              position: relative;
-        border: 2px solid $lite-yellow;
+      &:hover {
+        background-color: $lite-green;
+        animation-play-state: paused;
+      }
+
+      @include tablet {
+        margin-bottom: 0;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: -50px;
+        left: -3px;
+        background-image: url('.././images/tablet/ice-cream.png');
+        display: block;
+        width: 130px;
+        height: 130px;
+        background-position: center;
+        background-size: cover;
+        box-shadow: 0px 8px 30px rgba(10, 136, 23, 0.25);
+        border-radius: 50%;
+
+        @include retina-bg {
+          background-image: url(.././images/tablet/ice-cream-2x.png);
+        }
+      }
+    }
+    &--coffee {
+      position: relative;
+      border: 2px solid $lite-yellow;
+      border-radius: 15px;
+      margin-bottom: 84px;
+
+      padding-bottom: 20px;
+      padding-top: 95px;
+
+      animation-name: buy-cof;
+      animation-duration: 2000ms;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      &:hover {
         background-color: $lite-yellow;
-          border-radius: 15px;
-margin-bottom: 84px;
+        animation-play-state: paused;
+      }
 
+      @include tablet {
+        margin-bottom: 0;
+      }
 
-              padding-bottom: 20px;
-                    padding-top: 95px;
+      width: 130px;
+      &::before {
+        content: '';
+        position: absolute;
+        top: -50px;
+        left: -3px;
+        background-image: url('.././images/tablet/coffe.png');
+        display: block;
+        width: 130px;
+        height: 130px;
+        background-position: center;
+        background-size: cover;
+        box-shadow: 0px 8px 30px rgba(10, 136, 23, 0.25);
+        border-radius: 50%;
 
-          @include tablet {
-              margin-bottom: 0;
-            }
+        @include retina-bg {
+          background-image: url(.././images/tablet/coffe-2x.png);
+        }
+      }
+    }
+    &--coc {
+      position: relative;
+      border: 2px solid $lite-orange;
+      border-radius: 15px;
+      padding-bottom: 20px;
+      padding-top: 95px;
+      width: 130px;
 
-          width: 130px;
-            &::before {
-                content: '';
-                          position: absolute;
-                            top: -50px;
-                background-image: url(".././images/tablet/coffe.png");
-                display: block;
-                width: 130px;
-                height: 130px;
-                background-position: center;
-                background-size: cover;
-                box-shadow: 0px 8px 30px rgba(10, 136, 23, 0.25);
-                border-radius: 50%;
-            
-                @include retina-bg {
-                  background-image: url(.././images/tablet/coffe-2x.png);
-                }
-              }
-   }
-   &--coc{
-              position: relative;
-        border: 2px solid $lite-orange;
-          border-radius: 15px;
-              padding-bottom: 20px;
-                    padding-top: 95px;
-                              width: 130px;
-            &::before {
-                content: '';
-                          position: absolute;
-                            top: -50px;
-                background-image: url(".././images/tablet/coc.png");
-                display: block;
-                width: 130px;
-                height: 130px;
-                background-position: center;
-                background-size: cover;
-                box-shadow: 0px 8px 30px rgba(10, 136, 23, 0.25);
-                border-radius: 50%;
-            
-                @include retina-bg {
-                  background-image: url(.././images/tablet/coc-2x.png);
-                }
-              }
-   }
+      animation-name: buy-coc;
+      animation-duration: 2000ms;
+      animation-timing-function: linear;
+      animation-delay: 1000ms;
+      animation-iteration-count: infinite;
 
-}
+      &:hover {
+        background-color: $lite-orange;
+        animation-play-state: paused;
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        top: -50px;
+        left: -3px;
+        background-image: url('.././images/tablet/coc.png');
+        display: block;
+        width: 130px;
+        height: 130px;
+        background-position: center;
+        background-size: cover;
+        box-shadow: 0px 8px 30px rgba(10, 136, 23, 0.25);
+        border-radius: 50%;
+
+        @include retina-bg {
+          background-image: url(.././images/tablet/coc-2x.png);
+        }
+      }
+    }
+  }
 
   &__title {
     font-family: 'Seymour One', sans-serif;
@@ -447,10 +479,10 @@ margin-bottom: 84px;
     margin-right: auto;
     margin-bottom: 16px;
     width: 100%;
-      @include tablet {
-          width: 370px;
-        }    
-        &:last-child {
+    @include tablet {
+      width: 370px;
+    }
+    &:last-child {
       margin-bottom: 32px;
     }
   }
@@ -477,7 +509,7 @@ margin-bottom: 84px;
     border: 1px solid $bg-color;
     border-radius: 10px;
     resize: none;
-      overflow: auto;
+    overflow: auto;
     &:focus {
       outline: 1px solid $green-color;
     }
@@ -488,31 +520,68 @@ margin-bottom: 84px;
       color: $secondary-text-color;
     }
   }
-  &__btn{
+  &__btn {
     font-weight: 600;
-      font-size: 14px;
-      line-height: calc(17 / 14);
-      text-align: center;
-      padding: 12px 0;
-      cursor: pointer;
-      width: 150px;
-      background-color: $yellow-color;
-      border: none;
-      border-radius: 10px;
-      color: $secondary-text-color;
-    
-      transition: background-color 500ms linear, color 500ms linear;
-          
-      &:hover {
-        background-color: $green-color;
-          }
-    
-      &:focus {
-        background-color: $green-color;
-        color: $white-color;
-    
-      }
+    font-size: 14px;
+    line-height: calc(17 / 14);
+    text-align: center;
+    padding: 12px 0;
+    cursor: pointer;
+    width: 150px;
+    background-color: $yellow-color;
+    border: none;
+    border-radius: 10px;
+    color: $secondary-text-color;
+
+    transition: background-color 500ms linear, color 500ms linear;
+
+    &:hover {
+      background-color: $green-color;
+    }
+
+    &:focus {
+      background-color: $green-color;
+      color: $white-color;
     }
   }
+}
 
+@keyframes buy-ice {
+  0% {
+    background-color: $main-text-color;
+  }
+  50% {
+    background-color: $lite-green;
+  }
+  100% {
+    background-color: $main-text-color;
+  }
+}
 
+@keyframes buy-coc {
+  0% {
+    background-color: $main-text-color;
+  }
+
+  50% {
+    background-color: $lite-orange;
+  }
+
+  100% {
+    background-color: $main-text-color;
+  }
+}
+
+@keyframes buy-cof {
+  0% {
+    background-color: $main-text-color;
+  }
+
+  50% {
+    background-color: $lite-yellow;
+  }
+
+  100% {
+    background-color: $main-text-color;
+  }
+}
