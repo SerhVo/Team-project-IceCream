@@ -287,9 +287,10 @@
   stroke: currentColor;
 }
 // Модальне вікно
-.backdrop {
+.backdrop--about {
   position: fixed;
   top: 0;
+  left:0;
   opacity: 1;
   background-color: transparent;
   width: 100%;
@@ -297,11 +298,11 @@
   transition: opacity 200ms linear, visibility 200ms linear,
     pointer-events 200ms linear;
 
-  .backdrop.is-hidden & {
+  .backdrop.is-hidden--about & {
     transform: translate(-50%, -50%) scale(0.5);
   }
 }
-.is-hidden {
+.is-hidden--about {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -327,10 +328,12 @@
 
   @include mobile {
     width: 380px;
+    height: 460px;
   }
   @include tablet {
     width: 568px;
     padding: 32px 60px;
+    height: 450px;
   }
 }
 .readmore-modal__close {
