@@ -110,7 +110,6 @@
 
     &:hover {
         text-decoration: underline;
-
     }
 }
 
@@ -182,7 +181,7 @@
     font-weight: 600;
     line-height: 1.29;
     display: flex;
-
+cursor: pointer;
     border: none;
     outline: transparent;
 }
@@ -334,6 +333,8 @@
     margin-bottom: 20px;
 }
 
+
+
 .modal-location__item-img {
     border-radius: 10px;
     margin-bottom: 24px;
@@ -360,6 +361,7 @@
     font-weight: 600;
     font-size: 12px;
     line-height: calc(15 / 12);
+    padding: 12px 34px;
     display: flex;
     align-items: center;
     text-align: center;
@@ -368,9 +370,9 @@
     background-color: $yellow-color;
     border-radius: 10px;
     border: none;
-
+cursor: pointer;
     &:hover {
-        background-color: $green-color ;
+        background-color: $green-color;
     }
 }
 
@@ -519,8 +521,9 @@ color: #131313;
     border: 1px solid #84A178;
     border-radius: 10px;
     width: 100%;
-
+resize: none;
     &::placeholder {
+        padding-top: 8px;
         padding-left: 16px;
         font-size: 12px
     }
@@ -529,6 +532,7 @@ color: #131313;
         height: 84px;
 
         &::placeholder {
+            padding-top: 11px;
             font-size: 14px
         }
     }
@@ -545,11 +549,15 @@ color: #131313;
         font-size: 14px;
         line-height: calc(15 / 12);
        font-weight: 600;
-    @include desktop {
+       cursor: pointer;
 
- 
+       &:hover {
+        background: #fac506;
+       }
+
+    @include desktop {
         font-size: 14px;
         line-height: calc(17 / 14);
-
     }
+
 }
