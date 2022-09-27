@@ -170,7 +170,7 @@
     font-weight: 600;
     line-height: 1.29;
     display: flex;
-cursor: pointer;
+    cursor: pointer;
     border: none;
     outline: transparent;
 }
@@ -179,7 +179,7 @@ cursor: pointer;
     color: $secondary-text-color;
     background-color: $yellow-color;
     border: 2px solid $yellow-color;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 500ms linear,  border 500ms linear;
 
     &:focus {
         background-color: $green-color;
@@ -209,7 +209,7 @@ cursor: pointer;
     color: $secondary-text-color;
     background-color: transparent;
     border: 2px solid $yellow-color;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 500ms linear, border 500ms linear;
 
 
     &:focus {
@@ -369,7 +369,7 @@ cursor: pointer;
     position: absolute;;
     display: flex;
     fill: $secondary-text-color;
-    transition: fill 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 500ms linear;
     top: 8px;
     right: 8px;
     border: none;
@@ -385,13 +385,13 @@ cursor: pointer;
     position: absolute;
     display: flex;
     fill: $secondary-text-color;
-    transition: fill 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 500ms linear;
     top: 8px;
     right: 8px;
     border: none;
     background-color: transparent;
     fill: $secondary-text-color;
-    transition: fill 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    
 
 
     @include desktop {

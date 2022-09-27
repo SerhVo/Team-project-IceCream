@@ -158,7 +158,7 @@
       font-size: 8px;
       line-height: calc(10 / 8);
 
-      transition: color 500ms linear;
+      transition: color 500ms linear, border 500ms linear;
 
       @include desktop {
         font-size: 14px;
