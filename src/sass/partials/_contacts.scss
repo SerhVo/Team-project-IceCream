@@ -43,18 +43,6 @@
     }
 }
 
-/*.contacts-offset {
-    margin-top: -240px;
-
-    @include tablet {
-        margin-top: -302px;
-    }
-
-    @include desktop {
-        margin-top: -97px;
-    }
-}*/
-
 .contacts__item {
     background-color: $main-text-color;
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
@@ -64,8 +52,6 @@
         padding: 40px 32px;
         max-width: 280px;
     }
-
-
 
     @include tablet {
         width: calc((100% - 2 * 16px) / 3);
@@ -84,8 +70,6 @@
 
 }
 
-
-
 .contacts__title {
     display: inline;
     color: $secondary-text-color;
@@ -94,10 +78,12 @@
     padding: 0.5px 22px;
 }
 
-.contacts-card__title {
-    margin-top: 20px;
+.contacts-card__item{
+    padding-top: 24px;
+    @include tablet{
+        padding-top: 32px;
+    }
 }
-
 .contacts-card__item>.contacts-card__text:nth-child(2n) {
     color: #ABABAB;
 }
@@ -114,19 +100,24 @@
 }
 
 .contacts-card__border {
-    height: 0px;
-    background-color: #E1E1E1;
-    display: block;
-    border: 1px solid #E1E1E1;
-    margin: 24px 0;
+    // height: 0px;
+    // background-color: #E1E1E1;
+    // display: block;
+    border-bottom: 1px solid #E1E1E1;
+    // margin: 24px 0;
+    padding-bottom: 24px;
 
     @include tablet {
-        margin: 32px 0;
+        padding-bottom: 26px;
     }
 
     @include desktop {
-        margin: 32px 0;
+        padding-bottom: 32px;
     }
+}
+
+.contacts-card__title {
+    padding-bottom: 10px;
 }
 
 .contacts-card__link {
@@ -163,8 +154,6 @@
     }
 
 }
-
-
 
 .contacts__btn {
 
@@ -499,9 +488,13 @@ color: #131313;
     border: 1px solid #84A178;
     border-radius: 10px;
     width: 100%;
+    height: 32px;
     margin-bottom: 12px;
+    outline: none;
+    padding-left: 16px;
+
     &::placeholder {
-        padding-left: 16px;
+        // padding-left: 16px;
         font-size: 12px
     }
 
@@ -521,18 +514,20 @@ color: #131313;
     border: 1px solid #84A178;
     border-radius: 10px;
     width: 100%;
-resize: none;
+    resize: none;
+    outline: none;
+    padding-left: 16px;
+    padding-top: 8px;
+
     &::placeholder {
-        padding-top: 8px;
-        padding-left: 16px;
         font-size: 12px
     }
 
     @include desktop {
         height: 84px;
+        padding-top: 11px;
 
         &::placeholder {
-            padding-top: 11px;
             font-size: 14px
         }
     }
