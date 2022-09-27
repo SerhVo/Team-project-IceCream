@@ -23,11 +23,34 @@
                 <p class="about-text__paragraph-3">
                     This is enough to choose ice cream and coffee for any mood!
                 </p>
-                <button type="button" class="about__btn"><span>Read more</span><svg class="about__btn-icon"
-                        width="12px">
+                <button type="button" class="about__btn" data-readmore-open><span>Read more</span><svg
+                        class="about__btn-icon" width="12px">
                         <use href="./images/icons.svg#icon-vector-12px"></use>
                     </svg>
                 </button>
+                <!-- Модальне вікно -->
+                <div class="backdrop is-hidden" data-readmore>
+                    <div class="readmore-modal">
+                        <button type="button" class="readmore-modal__close" data-readmore-close>
+                            <svg class="readmore-modal__icon" width="20px" height="20px">
+                                <use href="./images/icons.svg#icon-modal-close-btn-mob">
+                                </use>
+                            </svg>
+                        </button>
+                        <h2 class="readmore-modal__title">How it’s made?</h2>
+                        <div class="readmore-modal-video">
+                            <iframe class="video" width="265.5px" height="199px"
+                                src="https://www.youtube.com/embed/8WEMZ86Eho8" title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <p class="readmore-modal__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut
+                            labore et Lorem ipsum dolor
+                            sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
