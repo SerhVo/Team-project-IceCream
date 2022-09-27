@@ -313,7 +313,9 @@
     position: relative;
     width: 570px;
     height: 650px;
+    overflow-y: hidden;
   }
+  
   &__list {
     display: flex;
     flex-direction: column;
