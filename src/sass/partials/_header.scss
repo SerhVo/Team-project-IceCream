@@ -274,12 +274,16 @@
   opacity: 1;
   overflow-y: scroll;
   @extend .icon-box;
+  transform: rotate(0);
+
+  transition: opacity 500ms linear, overflow 10ms linear, transform 800ms linear;
 
   &.buynow-hidden {
     opacity: 0;
     overflow: hidden;
     z-index: -1;
     pointer-events: none;
+    transform: rotate(1turn);
   }
 }
 

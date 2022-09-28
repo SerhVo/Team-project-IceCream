@@ -250,14 +250,12 @@
     height: 100%;
     top: 0;
     left: 0;
+    @extend .icon-box;
     overflow-y: scroll;
     transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
     background-color: rgba(0, 0, 0, 0.2);
     z-index: 99;
     opacity: 1;
-    
-
-
     &.contacts-hidden {
     opacity: 0;
     pointer-events: none;
@@ -366,7 +364,7 @@ cursor: pointer;
 }
 
 .modal-cont__close-btn {
-    position: absolute;;
+    position: absolute;
     display: flex;
     fill: $secondary-text-color;
     transition: fill 500ms linear;
@@ -400,37 +398,20 @@ cursor: pointer;
     }
 }
 
-.modal-fran__form {
-   
-    background: #FCFCFC;
-    border-radius: 10px;
-    border: 2px solid #F8D24E;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-       padding: 28px;
-       
-    @include mobile { 
- 
-        width: 280px;
-        position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-    }
-
-@include desktop {
-    width: 568px;
-    padding: 32px 60px;
-        
-    }
-}
 
 .modal-location-fran {
-    
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    position: relative;
+    width: 570px;
+    text-align: center;
+    color: $secondary-text-color;
+        background: #FCFCFC;
+            border-radius: 10px;
+            border: 2px solid #F8D24E;
+            padding: 32px 60px;
+
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
 
 }
 
@@ -440,33 +421,41 @@ font-style: normal;
 font-weight: 400;
 font-size: 16px;
 line-height: calc(24 / 16);
-display: flex;
-align-items: center;
-text-align: center;
-margin-bottom: 20px;
-color: #131313;
+margin-bottom: 24px;
 
 
     @include desktop {
-        margin: 0 63px 24px;
+        // margin: 0 63px 24px;
         font-size: 20px;
         line-height: calc(28 / 20);
     }
 }
 
 .modal-fran__text {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
+    // font-family: 'Montserrat';
+    // font-style: normal;
+    // font-weight: 400;
     font-size: 14px;
     line-height: calc(20 / 14);
-    color: $secondary-text-color;
-    margin-bottom: 24px;
+    text-align: start;
+    margin-bottom: 32px;
     @include desktop {
-        margin-bottom: 0;
         font-size: 16px;
         line-height: calc(22 / 16);
     letter-spacing: 0.02em;
+    }
+}
+
+.modal-fran__form {
+
+
+margin: 0 auto;
+        width: 280px;
+        text-align: center;
+
+    @include desktop {
+        width: 370px;
+
     }
 }
 
@@ -475,7 +464,7 @@ color: #131313;
     margin-bottom: 24px;
     @include desktop {
         margin: 32px 40px;
-        width: 368px;
+        width: 100%;
 
         
     }
@@ -518,6 +507,7 @@ color: #131313;
     outline: none;
     padding-left: 16px;
     padding-top: 8px;
+            margin-bottom: 16px;
 
     &::placeholder {
         font-size: 12px
@@ -537,6 +527,7 @@ color: #131313;
     background: #F8D24E;
     border-radius: 10px;
     display: block;
+    margin: 0 auto;
     border: none; 
     font-style: normal;
         color: #131313;
