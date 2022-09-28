@@ -1,558 +1,519 @@
 .contacts {
-    background-color: $bg-color;
-
+  background-color: $bg-color;
 }
 
 .contacts__list {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.875;
+  color: $secondary-text-color;
+  flex-wrap: wrap;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 1.875;
-    color: $secondary-text-color;
-    flex-wrap: wrap;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+  @include tablet {
+    font-size: 14px;
+    gap: 16px;
+  }
 
-    @include tablet {
-        font-size: 14px;
-        gap: 16px;
-    }
-
-    @include desktop {
-        font-size: 16px;
-        gap: 32px;
-    }
-
+  @include desktop {
+    font-size: 16px;
+    gap: 32px;
+  }
 }
 
 .contacts-possition {
-    position: relative;
-    top: -240px;
+  position: relative;
+  top: -240px;
 
-    @include tablet {
-        font-size: 14px;
-        top: -302px;
-    }
+  @include tablet {
+    font-size: 14px;
+    top: -302px;
+  }
 
-    @include desktop {
-        font-size: 16px;
-        top: -97px;
-    }
+  @include desktop {
+    font-size: 16px;
+    top: -97px;
+  }
 }
 
 .contacts__item {
-    background-color: $main-text-color;
-    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
-    border-radius: 24px;
+  background-color: $main-text-color;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  border-radius: 24px;
 
-    @media screen and (max-width: 767px) {
-        padding: 40px 32px;
-        max-width: 280px;
-    }
+  @media screen and (max-width: 767px) {
+    padding: 40px 32px;
+    max-width: 280px;
+  }
 
-    @include tablet {
-        width: calc((100% - 2 * 16px) / 3);
-        padding: 40px 24px;
+  @include tablet {
+    width: calc((100% - 2 * 16px) / 3);
+    padding: 40px 24px;
+  }
 
-
-    }
-
-    @include desktop {
-
-        width: calc((100% - 2 * 32px) / 3);
-        padding: 40px;
-    }
-
-
-
+  @include desktop {
+    width: calc((100% - 2 * 32px) / 3);
+    padding: 40px;
+  }
 }
 
 .contacts__title {
-    display: inline;
-    color: $secondary-text-color;
-    background: $yellow-color;
-    border-radius: 4px;
-    padding: 0.5px 22px;
+  display: inline;
+  color: $secondary-text-color;
+  background: $yellow-color;
+  border-radius: 4px;
+  padding: 0.5px 22px;
 }
 
-.contacts-card__item{
-    padding-top: 24px;
-    @include tablet{
-        padding-top: 32px;
-    }
+.contacts-card__item {
+  padding-top: 24px;
+  @include tablet {
+    padding-top: 32px;
+  }
 }
-.contacts-card__item>.contacts-card__text:nth-child(2n) {
-    color: #ABABAB;
+.contacts-card__item > .contacts-card__text:nth-child(2n) {
+  color: #ababab;
 }
 
 .address__text {
-    line-height: 1, 857;
-    color: $lite-orange;
-    font-style: normal;
-    margin-top: 8px;
+  line-height: 1, 857;
+  color: $lite-orange;
+  font-style: normal;
+  margin-top: 8px;
 
-    &:hover {
-        text-decoration: underline;
-    }
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .contacts-card__border {
-    // height: 0px;
-    // background-color: #E1E1E1;
-    // display: block;
-    border-bottom: 1px solid #E1E1E1;
-    // margin: 24px 0;
-    padding-bottom: 24px;
+  // height: 0px;
+  // background-color: #E1E1E1;
+  // display: block;
+  border-bottom: 1px solid #e1e1e1;
+  // margin: 24px 0;
+  padding-bottom: 24px;
 
-    @include tablet {
-        padding-bottom: 26px;
-    }
+  @include tablet {
+    padding-bottom: 26px;
+  }
 
-    @include desktop {
-        padding-bottom: 32px;
-    }
+  @include desktop {
+    padding-bottom: 32px;
+  }
 }
 
 .contacts-card__title {
-    padding-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 .contacts-card__link {
-    display: inline;
-    font-style: normal;
-    color: $secondary-text-color;
+  display: inline;
+  font-style: normal;
+  color: $secondary-text-color;
 }
 
 .contacts-btn__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 32px;
+  margin-top: 39px;
+
+  & > li:nth-child(2) {
+    margin-top: 16px;
+  }
+
+  @include tablet {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 32px;
-    margin-top: 39px;
+    flex-direction: row;
+    margin-top: 60px;
 
-    &>li:nth-child(2) {
-        margin-top: 16px;
+    & > li:nth-child(2) {
+      margin-left: 16px;
+      margin-top: 0;
     }
+  }
 
-    @include tablet {
-        display: flex;
-        flex-direction: row;
-        margin-top: 60px;
-
-        &>li:nth-child(2) {
-            margin-left: 16px;
-            margin-top: 0;
-        }
-    }
-
-    @include desktop {
-        margin-top: 64px;
-    }
-
+  @include desktop {
+    margin-top: 64px;
+  }
 }
 
 .contacts__btn {
+  width: 196px;
+  height: 42px;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0;
 
-    width: 196px;
-    height: 42px;
-    border-radius: 10px;
-    justify-content: center;
-    align-items: center;
-    padding: 12px 0;
-
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 1.29;
-    display: flex;
-    cursor: pointer;
-    border: none;
-    outline: transparent;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.29;
+  display: flex;
+  cursor: pointer;
+  border: none;
+  outline: transparent;
 }
 
 .contacts__btn-location {
-    color: $secondary-text-color;
-    background-color: $yellow-color;
-    border: 2px solid $yellow-color;
-    transition: background-color 500ms linear,  border 500ms linear;
+  color: $secondary-text-color;
+  background-color: $yellow-color;
+  border: 2px solid $yellow-color;
+  transition: background-color 500ms linear, border 500ms linear;
 
-    &:focus {
-        background-color: $green-color;
-        border-color: $green-color;
-        color: $main-text-color;
+  &:focus {
+    background-color: $green-color;
+    border-color: $green-color;
+    color: $main-text-color;
+  }
+
+  &:focus .contacts__btn-icon {
+    stroke: $main-text-color;
+    fill: transparent;
+  }
+
+  &:hover {
+    background-color: $green-color;
+    border-color: $green-color;
+
+    &:disabled {
+      background-color: #ababab;
+      border-color: #ababab;
     }
-
-    &:focus .contacts__btn-icon {
-        stroke: $main-text-color;
-        fill: transparent;
-    }
-
-    &:hover {
-        background-color: $green-color;
-        border-color: $green-color;
-
-        &:disabled {
-            background-color: #ABABAB;
-            border-color: #ABABAB;
-        }
-    }
-
-
+  }
 }
 
 .contacts__btn-franchise {
-    color: $secondary-text-color;
-    background-color: transparent;
-    border: 2px solid $yellow-color;
-    transition: background-color 500ms linear, border 500ms linear;
+  color: $secondary-text-color;
+  background-color: transparent;
+  border: 2px solid $yellow-color;
+  transition: background-color 500ms linear, border 500ms linear;
 
+  &:focus {
+    border-color: $green-color;
+    color: $main-text-color;
+  }
 
-    &:focus {
-        border-color: $green-color;
-        color: $main-text-color;
+  &:focus .contacts__btn-icon {
+    stroke: $main-text-color;
+    fill: transparent;
+  }
+
+  &:hover {
+    border-color: $green-color;
+
+    &:disabled {
+      border-color: #ababab;
     }
-
-    &:focus .contacts__btn-icon {
-        stroke: $main-text-color;
-        fill: transparent;
-    }
-
-    &:hover {
-        border-color: $green-color;
-
-
-        &:disabled {
-            border-color: #ABABAB;
-        }
-    }
+  }
 }
 
-
 .contacts__btn-icon {
-    height: 12px;
-    width: 12px;
-    fill: #0000;
-    stroke: currentColor;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    margin-left: 6px;
+  height: 12px;
+  width: 12px;
+  fill: #0000;
+  stroke: currentColor;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-left: 6px;
 }
 
 .contacts-backdrop {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    @extend .icon-box;
-    overflow-y: scroll;
-    transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
-    background-color: rgba(0, 0, 0, 0.2);
-    z-index: 99;
-    opacity: 1;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  @extend .icon-box;
+  overflow-y: scroll;
+  transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 99;
+  opacity: 1;
 
-transition: opacity 500ms linear, visibility 10ms linear;
+  transition: opacity 500ms linear, visibility 10ms linear;
 
-    &.contacts-hidden {
+  &.contacts-hidden {
     opacity: 0;
     pointer-events: none;
     visibility: none;
-    }
+  }
 
-    &.contacts-fran-hidden {
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-    }
+  &.contacts-fran-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
 }
 
 .modal-location__list {
-    padding: 28px;
-    display: flex;
-    align-items: center;
-    background: #FCFCFC;
-    border: 2px solid #F8D24E;
-    border-radius: 10px;
-    flex-direction: column;
+  padding: 28px;
+  display: flex;
+  align-items: center;
+  background: #fcfcfc;
+  border: 2px solid #f8d24e;
+  border-radius: 10px;
+  flex-direction: column;
 
-@include mobile {
+  @include mobile {
     width: 280px;
     height: 365px;
     position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-}
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
-@include tablet {
+  @include tablet {
     width: 568px;
     height: 458px;
 
-    
-
     position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-}
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
-    @include desktop {
-        width: 568px;
-        height: 458px;
-
-        
-    }
+  @include desktop {
+    width: 568px;
+    height: 458px;
+  }
 }
 
 .modal-location__text {
-    font-family: 'Seymour One';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: calc(24 / 16);
+  font-family: 'Seymour One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: calc(24 / 16);
 
-    text-align: center;
+  text-align: center;
 
-    color: $secondary-text-color;
-    margin-bottom: 20px;
+  color: $secondary-text-color;
+  margin-bottom: 20px;
 }
-
-
 
 .modal-location__item-img {
-    border-radius: 10px;
-    margin-bottom: 24px;
-    object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 24px;
+  object-fit: cover;
 
-    @include tablet {
-        margin-bottom: 32px;
-
-    }
+  @include tablet {
+    margin-bottom: 32px;
+  }
 }
 .modal-loc__btn-img {
-     border: none;
-     fill: $secondary-text-color;
-    background-color: transparent;
-    &:hover {
-        fill: brown;
-    }
+  border: none;
+  fill: $secondary-text-color;
+  background-color: transparent;
+  &:hover {
+    fill: brown;
+  }
 }
 
 .modal-location__btn {
-
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: calc(15 / 12);
-    padding: 12px 34px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    padding: 12px 34px;
-    color: $secondary-text-color;
-    background-color: $yellow-color;
-    border-radius: 10px;
-    border: none;
-cursor: pointer;
-    &:hover {
-        background-color: $green-color;
-    }
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: calc(15 / 12);
+  padding: 12px 34px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 12px 34px;
+  color: $secondary-text-color;
+  background-color: $yellow-color;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    background-color: $green-color;
+  }
 }
 
 .modal-cont__close-btn {
-    position: absolute;
-    display: flex;
-    fill: $secondary-text-color;
-    transition: fill 500ms linear;
-    top: 8px;
-    right: 8px;
-    border: none;
-    background-color: transparent;
+  position: absolute;
+  display: flex;
+  fill: $secondary-text-color;
+  transition: fill 500ms linear;
+  top: 8px;
+  right: 8px;
+  border: none;
+  background-color: transparent;
 
-    @include desktop {
-        top: 20px;
-        right: 20px;
-    }
+  @include desktop {
+    top: 20px;
+    right: 20px;
+  }
 }
 
 .modal-fran__close-btn {
-    position: absolute;
-    display: flex;
-    fill: $secondary-text-color;
-    transition: fill 500ms linear;
-    top: 8px;
-    right: 8px;
-    border: none;
-    background-color: transparent;
-    fill: $secondary-text-color;
-    
+  position: absolute;
+  display: flex;
+  fill: $secondary-text-color;
+  transition: fill 500ms linear;
+  top: 8px;
+  right: 8px;
+  border: none;
+  background-color: transparent;
+  fill: $secondary-text-color;
 
-
-    @include desktop {
-        top: 20px;
-        left: 20px;
-    }
+  @include desktop {
+    top: 20px;
+    left: 20px;
+  }
 }
 
-
 .modal-location-fran {
-    position: relative;
-    text-align: center;
-                                width: 280px;
-                                                                        padding: 30px;
-    color: $secondary-text-color;
-        background: #FCFCFC;
-            border-radius: 10px;
-            border: 2px solid #F8D24E;
+  position: relative;
+  text-align: center;
+  width: 280px;
+  padding: 30px;
+  color: $secondary-text-color;
+  background: #fcfcfc;
+  border-radius: 10px;
+  border: 2px solid #f8d24e;
 
-                @include desktop {
-                        // margin: 0 63px 24px;
-                            width: 570px;
-                                        padding: 32px 60px;
-                    }
+  @include tablet {
+    // margin: 0 63px 24px;
+    width: 570px;
+    padding: 32px 60px;
+  }
 
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
 }
 
 .modal-fran__title {
-    font-family: 'Seymour One';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: calc(24 / 16);
-margin-bottom: 24px;
+  font-family: 'Seymour One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: calc(24 / 16);
+  margin-bottom: 24px;
 
-
-    @include desktop {
-        // margin: 0 63px 24px;
-        font-size: 20px;
-        line-height: calc(28 / 20);
-    }
+  @include desktop {
+    // margin: 0 63px 24px;
+    font-size: 20px;
+    line-height: calc(28 / 20);
+  }
 }
 
 .modal-fran__text {
-    // font-family: 'Montserrat';
-    // font-style: normal;
-    // font-weight: 400;
-    font-size: 14px;
-    line-height: 140%;
-    text-align: start;
-    margin-bottom: 32px;
-    @include desktop {
-        font-size: 16px;
-        line-height: calc(22 / 16);
+  // font-family: 'Montserrat';
+  // font-style: normal;
+  // font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  text-align: start;
+  margin-bottom: 32px;
+  @include desktop {
+    font-size: 16px;
+    line-height: calc(22 / 16);
     letter-spacing: 0.02em;
-    }
+  }
 }
 
 .modal-fran__form {
+  margin: 0 auto;
+  width: 220px;
+  text-align: center;
 
-
-margin: 0 auto;
-        width: 220px;
-        text-align: center;
-
-    @include desktop {
-        width: 370px;
-
-    }
+  @include desktop {
+    width: 370px;
+  }
 }
 
 .modal-fran__input-pos {
-
-    margin-bottom: 24px;
-    @include desktop {
-        margin: 32px 40px;
-        width: 100%;
-
-        
-    }
+  margin-bottom: 24px;
+  @include desktop {
+    margin: 32px 40px;
+    width: 100%;
+  }
 }
 
-
 .modal-fran__input {
+  background: rgba(248, 210, 78, 0.1);
+  border: 1px solid #84a178;
+  border-radius: 10px;
+  width: 100%;
+  height: 32px;
+  margin-bottom: 12px;
+  outline: none;
+  padding-left: 16px;
 
-    background: rgba(248, 210, 78, 0.1);
-    border: 1px solid #84A178;
-    border-radius: 10px;
-    width: 100%;
-    height: 32px;
-    margin-bottom: 12px;
-    outline: none;
-    padding-left: 16px;
+  &::placeholder {
+    // padding-left: 16px;
+    font-size: 12px;
+  }
+
+  @include desktop {
+    height: 42px;
+    margin-bottom: 16px;
 
     &::placeholder {
-        // padding-left: 16px;
-        font-size: 12px
+      font-size: 14px;
     }
-
-    @include desktop {
-        height: 42px;
-        margin-bottom: 16px;
-
-        &::placeholder {
-            font-size: 14px
-        }
-    }
+  }
 }
 
 .modal-fran__textarea {
+  background: rgba(248, 210, 78, 0.1);
+  border: 1px solid #84a178;
+  border-radius: 10px;
+  width: 100%;
+  resize: none;
+  outline: none;
+  padding-left: 16px;
+  padding-top: 8px;
+  margin-bottom: 16px;
 
-    background: rgba(248, 210, 78, 0.1);
-    border: 1px solid #84A178;
-    border-radius: 10px;
-    width: 100%;
-    resize: none;
-    outline: none;
-    padding-left: 16px;
-    padding-top: 8px;
-            margin-bottom: 16px;
+  &::placeholder {
+    font-size: 12px;
+  }
+
+  @include desktop {
+    height: 84px;
+    padding-top: 11px;
 
     &::placeholder {
-        font-size: 12px
+      font-size: 14px;
     }
-
-    @include desktop {
-        height: 84px;
-        padding-top: 11px;
-
-        &::placeholder {
-            font-size: 14px
-        }
-    }
+  }
 }
 
 .modal-fran__btn {
-    background: #F8D24E;
-    border-radius: 10px;
-    display: block;
-    margin: 0 auto;
-    border: none; 
-    font-style: normal;
-        color: #131313;
-        padding: 12px 34px;
-        font-size: 14px;
-        line-height: calc(15 / 12);
-       font-weight: 600;
-       cursor: pointer;
+  background: #f8d24e;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+  border: none;
+  font-style: normal;
+  color: #131313;
+  padding: 12px 34px;
+  font-size: 14px;
+  line-height: calc(15 / 12);
+  font-weight: 600;
+  cursor: pointer;
 
-       &:hover {
-        background: #fac506;
-       }
+  &:hover {
+    background: #fac506;
+  }
 
-    @include desktop {
-        font-size: 14px;
-        line-height: calc(17 / 14);
-    }
-
+  @include desktop {
+    font-size: 14px;
+    line-height: calc(17 / 14);
+  }
 }
