@@ -256,6 +256,9 @@
     background-color: rgba(0, 0, 0, 0.2);
     z-index: 99;
     opacity: 1;
+
+transition: opacity 500ms linear, visibility 10ms linear;
+
     &.contacts-hidden {
     opacity: 0;
     pointer-events: none;
@@ -401,13 +404,19 @@ cursor: pointer;
 
 .modal-location-fran {
     position: relative;
-    width: 570px;
     text-align: center;
+                                width: 280px;
+                                                                        padding: 30px;
     color: $secondary-text-color;
         background: #FCFCFC;
             border-radius: 10px;
             border: 2px solid #F8D24E;
-            padding: 32px 60px;
+
+                @include desktop {
+                        // margin: 0 63px 24px;
+                            width: 570px;
+                                        padding: 32px 60px;
+                    }
 
 //   display: flex;
 //   align-items: center;
@@ -436,7 +445,7 @@ margin-bottom: 24px;
     // font-style: normal;
     // font-weight: 400;
     font-size: 14px;
-    line-height: calc(20 / 14);
+    line-height: 140%;
     text-align: start;
     margin-bottom: 32px;
     @include desktop {
@@ -450,7 +459,7 @@ margin-bottom: 24px;
 
 
 margin: 0 auto;
-        width: 280px;
+        width: 220px;
         text-align: center;
 
     @include desktop {
